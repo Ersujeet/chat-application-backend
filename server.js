@@ -14,14 +14,17 @@ app.use(express.json());
 // app.use(cors());
 
 // Routes
+app.get('/',(req,res)=>{
+  res.send("Server Start")
+}
+       )
 app.use('/api/auth', authRoutes);
 app.use('/api/groups', groupRoutes);
 app.use('/api/message',messageRoutes)
 
 // Connect to MongoDB
-const MONGO_URI = 'mongodb+srv://manofiron786:6xnZBxhdrxtOLjBe@chat.w72bq.mongodb.net/'
-mongoose
-  .connect(MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
+
+mongoose.connect('mongodb+srv://manofiron786:6xnZBxhdrxtOLjBe@chat.w72bq.mongodb.net/', { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('MongoDB connected'))
   .catch(err => console.log(err));
 
