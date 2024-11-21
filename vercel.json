@@ -13,7 +13,9 @@
       }
     ],
     "env": {
-      "MONGO_URI": "@mongo-uri"
+      "MONGO_URI": "mongodb+srv://manofiron786:6xnZBxhdrxtOLjBe@chat.w72bq.mongodb.net/",
+      "PORT": 5000,
+      "TokenKey":"Chatapp12345"
     }
   }
   
